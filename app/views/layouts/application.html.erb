@@ -13,7 +13,7 @@
   <body>
     <div id="sidebar">
       <ul>
-        <li class="category"><%= link_to "Tumblr", root_path %></li>
+        <li class="category"><%= link_to image_tag("thoughts.png"), root_path %></li>
         <li><%= link_to "Posts", root_path %></li>
         <li><%= link_to "About", about_path %></li>
       </ul>
@@ -33,7 +33,7 @@
         <% else %>
           <%= link_to "Back to Post Feed", root_path %>
         <% end %>
-      
+
        <% if model_signed_in? %>
        <div class="buttons">
           <button class="button"><%= link_to "Make Post", new_post_path %></button>
@@ -49,6 +49,6 @@
       <%= yield %>
 
     </div>
-    
+
   </body>
 </html>
